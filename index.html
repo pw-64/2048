@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>2048</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <script src="jquery.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h1 style="margin: 0">2048</h1>
+        <span id="info"></span>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <table style="width: fit-content;">
+                <tr>
+                    <td><p class="tile" id="current_cell_1"  onclick="CellClicked(1)"></p></td>
+                    <td><p class="tile" id="current_cell_2"  onclick="CellClicked(2)"></p></td>
+                    <td><p class="tile" id="current_cell_3"  onclick="CellClicked(3)"></p></td>
+                    <td><p class="tile" id="current_cell_4"  onclick="CellClicked(4)"></p></td>
+                </tr>
+                <tr>
+                    <td><p class="tile" id="current_cell_5"  onclick="CellClicked(5)"></p></td>
+                    <td><p class="tile" id="current_cell_6"  onclick="CellClicked(6)"></p></td>
+                    <td><p class="tile" id="current_cell_7"  onclick="CellClicked(7)"></p></td>
+                    <td><p class="tile" id="current_cell_8"  onclick="CellClicked(8)"></p></td>
+                </tr>
+                <tr>
+                    <td><p class="tile" id="current_cell_9"  onclick="CellClicked(9)"></p></td>
+                    <td><p class="tile" id="current_cell_10" onclick="CellClicked(10)"></p></td>
+                    <td><p class="tile" id="current_cell_11" onclick="CellClicked(11)"></p></td>
+                    <td><p class="tile" id="current_cell_12" onclick="CellClicked(12)"></p></td>
+                </tr>
+                <tr>
+                    <td><p class="tile" id="current_cell_13" onclick="CellClicked(13)"></p></td>
+                    <td><p class="tile" id="current_cell_14" onclick="CellClicked(14)"></p></td>
+                    <td><p class="tile" id="current_cell_15" onclick="CellClicked(15)"></p></td>
+                    <td><p class="tile" id="current_cell_16" onclick="CellClicked(16)"></p></td>
+                </tr>
+            </table>
+            <div id="controls">
+                <div>
+                    <button onclick="MoveUp()">↑</button>
+                </div>
+                <div style="display: flex; justify-content: space-between; gap: 1px;">
+                    <button onclick="MoveLeft()">←</button>
+<!--                    <button id="spawn" onclick="Spawn()">+</button>-->
+                    <button onclick="MoveRight()">→</button>
+                </div>
+                <div>
+                    <button onclick="MoveDown()">↓</button>
+                </div>
+            </div>
+            <div>
+                <button onclick="show_help = !show_help; $('#howto').css('display', show_help ? 'block' : 'none')">How To Play</button>
+                <p id="howto" style="display: none">
+<!--                    Click + to create new tiles.<br>-->
+                    Press the arrow buttons or keyboard keys to move all the tiles in that direction.<br>
+                    Each time you play a turn, a new tile is added.<br>
+                    If you play a turn and no tiles move, the game is finished.<br>
+                    If two of the same tiles are moved in a parallel direction, they will merge and the value will double.<br>
+                    Continue merging tiles until you reach 2048, then click that tile to make space on the grid<br>
+                    Keep a record of your score and see if you can beat your friends!
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

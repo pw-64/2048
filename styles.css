@@ -1,0 +1,81 @@
+body {
+  text-align: center;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+}
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border: 3px solid dodgerblue;
+  border-radius: 5px;
+  color: white;
+}
+.tile[value="1"] {
+  background: grey;
+}
+.tile[value="2"] {
+  background: #382C1E;
+}
+.tile[value="4"] {
+  background: #DE4C8A;
+}
+.tile[value="8"] {
+  background: #294f4f;
+}
+.tile[value="16"] {
+  background: #606E8C;
+}
+.tile[value="32"] {
+  background: #1E213D;
+}
+.tile[value="64"] {
+  background: #479f2d;
+}
+.tile[value="128"] {
+  background: #316650;
+}
+.tile[value="256"] {
+  background: #B32821;
+}
+.tile[value="512"] {
+  background: #2271B3;
+}
+.tile[value="1024"] {
+  background: #7a6c34;
+}
+.tile[value="2048"] {
+  color: black;
+  cursor: pointer;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    background: gold;
+  }
+  50% {
+    background: orange;
+  }
+  100% {
+    background: gold;
+  }
+}
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 90px;
+}
+#controls button {
+  height: 30px;
+  width: 30px;
+}
+/*# sourceMappingURL=styles.css.map */
