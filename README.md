@@ -10,15 +10,16 @@ It seems to work well without any issues, although if you find anything don't be
 
 I hope you enjoy playing it :)
 
+## Adjusting to your liking
 
-## Adding numbers beyond 2048
+### Adding numbers beyond 2048
 - Add another color in the css
 - Change the trigger value for `CellClicked()`
 - In `Update()` change `count_2048 * XXX` to the highest value
 - In the `MoveXXX()` functions, you need to modify the if statement that checks for `cells[i] !== 2048`
 
 
-## Expanding the grid
+### Expanding the grid
 - Add more `null`s to cells[]
 - (Optional) Increase `starting_cells_count` random range
 - In `GameOverCheck()` adjust the checked cells in the if statements (the comments at the end of the lines say what each is for)
